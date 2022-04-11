@@ -1,0 +1,28 @@
+{
+  "name": "projetx",
+  "version": "1.0.0",
+  "description": "Seja bem vindo(a) à sexta Semana Javascript Expert. Este é o código inicial para iniciar nossa jornada.",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "daemon": "^1.1.0",
+    "init": "^0.1.2",
+    "nodemon": "^2.0.15",
+    "pino": "^7.8.0",
+    "pino-pretty": "^7.6.1"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "live-reload": "nodemon server/index.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --no-cache"
+  },
+  "engines": {
+    "node": "17"
+  },
+  "keywords": [],
+  "author": "dev.EvertonJackson",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
