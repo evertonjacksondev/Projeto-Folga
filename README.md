@@ -2,6 +2,8 @@
 
 Seja bem vindo(a) à sexta Semana Javascript Expert. Este é o código inicial para iniciar nossa jornada.
 
+"Projeto Direcionado para incentivar o desenvolvimento profissional da equipe."
+
 Marque esse projeto com uma estrela 🌟
 
 ## Preview

@@ -14,7 +14,7 @@
   "scripts": {
     "start": "node server/index.js",
     "live-reload": "nodemon server/index.js",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --no-cache"
+    "test": "set NODE_OPTIONS=--experimental-vm-modules && npx jest --runInBand"
   },
   "engines": {
     "node": "17"
