@@ -14,7 +14,9 @@
   "scripts": {
     "start": "node server/index.js",
     "live-reload": "nodemon server/index.js",
-    "test": "set NODE_OPTIONS=--experimental-vm-modules && npx jest --runInBand"
+    "test": "set NODE_OPTIONS=--experimental-vm-modules && npx jest --runInBand",
+    "test:watch":"set NODE_OPTIONS=--experimental-vm-modules && npx jest --runInBand --watchAll",
+    "test:coverage":"set NODE_OPTIONS=--experimental-vm-modules && npx jest --runInBand --coverage tests/unit"
   },
   "engines": {
     "node": "17"

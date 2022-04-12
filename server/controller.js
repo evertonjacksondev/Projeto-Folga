@@ -4,7 +4,7 @@ export class Controller{
   constructor(){
     this.service = new Service();
   }
-   async getFileSream(filename)
+   async getFileSream(name)
 {
-  return this.service.getFileStream(filename)
+  return this.service.getFileStream(name)
 }}
