@@ -29,7 +29,8 @@ Marque esse projeto com uma estrela 🌟
     - Controller
         - [x] Deve atingir 100% de cobertura de código em testes
         - [ ] Deve poder iniciar ou parar uma transmissão 
-        - [ ] Deve enviar comandos para adicionar audio efeitos à uma transmissão
+        - [ ] Deve enviar comandos para adicionar audio efeitos à uma transmissão 
+        
 
 ## Tarefas por aula
 
