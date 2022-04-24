@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -96,20 +96,18 @@
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
 <a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -129,21 +127,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { join, dirname} from 'path';
-import {fileURLToPath} from 'url'
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { join, dirname } from 'path'
+import { fileURLToPath } from 'url'
 const currentDir = dirname(fileURLToPath(import.meta.url))
-const root = join(currentDir, '../')
-const audioDirectory = join(root, 'audio')
-const publicDirectory = join(root, 'public')
-&nbsp;
+const root = join( currentDir, '../')
+const audioDirectory = join( root, 'audio')
+const publicDirectory = join( root, 'public')
+const songsDirectory = join(audioDirectory, 'songs')
 export default {
   port: process.env.PORT || 3000,
-  dir:{
+  dir: {
     root,
     publicDirectory,
     audioDirectory,
-    songsDirectory: join(audioDirectory,'songs'),
-    fxDirectory: join(audioDirectory,'fx')
+    songsDirectory,
+    fxDirectory: join(audioDirectory, 'fx')
   },
   pages: {
     homeHTML: 'home/index.html',
@@ -152,24 +162,29 @@ export default {
   location: {
     home: '/home'
   },
-  constants:{
-    CONTENT_TYPE:{
+  constants: {
+    CONTENT_TYPE: {
       '.html': 'text/html',
       '.css': 'text/css',
-      '.js':'text/javascript',
-      '.png':'text/png',
-      '.mp3':'text/mp3',
-      '.jpg':'text/jpg',
-    }
+      '.js': 'text/javascript',
+    }, 
+    audioMediaType: 'mp3',
+    songVolume: '0.99',
+    fxVolume: '0.1',
+    fallbackBitRate: '128000',
+    bitRateDivisor: 8,
+    englishConversation: join(songsDirectory, 'conversation.mp3')
   }
-}</pre></td></tr></table></pre>
+}
+&nbsp;
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sun Apr 24 2022 19:36:51 GMT-0300 (Horário Padrão de Brasília)
+                at Sat Mar 19 2022 15:45:57 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../prettify.js"></script>
         <script>

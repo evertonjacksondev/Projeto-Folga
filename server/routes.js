@@ -63,6 +63,7 @@ async function routes(request, response) {
       onClose
     } = controller.createClientStream()
     request.once("close", onClose)
+    
     response.writeHead(200, {
       'Content-Type': 'audio/mpeg',
       // fix: aqui estava Rages

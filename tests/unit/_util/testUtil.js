@@ -1,5 +1,3 @@
-/* istanbul ignore file */
-
 import {
   jest
 } from '@jest/globals'
@@ -25,7 +23,8 @@ export default class TestUtil {
   static generateWritableStream(onData) {
     return new Writable({
       write(chunk, enc, cb) {
-        onData(chunk)
+        // fix: troquei esse trecho para deixar a função opcional e ficar com 100% cov
+        onData?.(chunk)
 
         cb(null, chunk)
       }
@@ -34,7 +33,8 @@ export default class TestUtil {
 
   static defaultHandleParams() {
     const requestStream = TestUtil.generateReadableStream(['body da requisicao'])
-    const response = TestUtil.generateWritableStream(() => {})
+    // fix: removi a funcao vazia
+    const response = TestUtil.generateWritableStream()
     const data = {
       request: Object.assign(requestStream, {
         headers: {},
