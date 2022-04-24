@@ -34,6 +34,3 @@ sox \
   "output.mp3"
 
 // obter o bitrate 
-
-
-docker exec -it  50a2dd77e3c2 bash  

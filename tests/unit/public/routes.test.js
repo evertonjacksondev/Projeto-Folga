@@ -1,9 +1,8 @@
-import { expect, describe, test } from '@jest/globals'
+
+import { jest, expect, describe, test } from '@jest/globals'
 
 describe('#Routes', () => {
-
-  test('my teste', () => {
-
+  test('my test', () => {
     expect(true).toBeTruthy()
   })
-})
+})  

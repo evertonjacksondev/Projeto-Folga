@@ -4,32 +4,30 @@
   "description": "Seja bem vindo(a) à sexta Semana Javascript Expert. Este é o código inicial para iniciar nossa jornada.",
   "main": "index.js",
   "type": "module",
-  "dependencies": {
-    "daemon": "^1.1.0",
-    "init": "^0.1.2",
-    "nodemon": "^2.0.15",
-    "pino": "^7.8.0",
-    "pino-pretty": "^7.6.1"
-  },
   "scripts": {
     "start": "node server/index.js",
     "live-reload": "nodemon server/index.js",
-    "test": "set NODE_OPTIONS=--experimental-vm-modules && npx jest --runInBand",
-    "test:watch": "set NODE_OPTIONS=--experimental-vm-modules  && npx jest --runInBand --watchAll",
-    "test:coverage": "set NODE_OPTIONS=--experimental-vm-modules && npx jest --runInBand --coverage tests/unit",
-    "test:e2e": "NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --force-exit --detectOpenHandles --no-cache tests/e2e",
-    "live-reload:docker": "docker-compose up --build live-reload",
-    "test:docker": "docker-compose up --build test",
-    "test:watch:docker": "docker-compose up --build test-watch",
-    "test:coverage:docker": "docker-compose up --build test-coverage"
+    "test": "set NODE_OPTIONS=--experimental-vm-modules && npx jest --detectOpenHandles --runInBand",
+    "test:watch": "set NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --no-cache --watchAll",
+    "test:coverage": "set NODE_OPTIONS=--experimental-vm-modules && npx jest --detectOpenHandles --runInBand --coverage tests/unit",
+    "live-reload:docker": "docker-compose up live-reload"
   },
   "engines": {
-    "node": "17"
+    "node": "18"
   },
   "keywords": [],
   "author": "dev.EvertonJackson",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "portfinder": "^1.0.28",
+    "supertest": "^6.2.2"
+  },
+  "dependencies": {
+    "pino": "^7.8.0",
+    "pino-pretty": "^7.5.3",
+    "sox": "^0.1.0",
+    "throttle": "^1.0.3"
   }
 }

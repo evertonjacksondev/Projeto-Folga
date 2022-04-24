@@ -62,7 +62,7 @@
         </div>
         <div class="container__section__radio-header__infos">
           <p>radio</p>
-          <h1> PROJETO ZEENE - JS Expert Week 6.0</h1>
+          <h1>JS Expert Week 6.0</h1>
           <h3 class="hide">with Everton Jackson</h3>
         </div>
       </div>
@@ -141,13 +141,13 @@
       </div>
       <div>
         <p>Node.js audio processing</p>
-        <p>Erick Wendel</p>
+        <p>Everton Jackson</p>
       </div>
       <i class="fas fa-heart hide"></i>
     </div>
 
     <div class="audio-player">
-      <audio id="audio" preload="none" controls autoplay src="./home/../home/../home/audio/songs/conversation.mp3"></audio>
+      <audio id="audio" preload="none" controls autoplay></audio>
 
       <div class="player-controls">
         <div class="player__actions">
@@ -170,9 +170,15 @@
   </div>
   <div class="device-bar hide">
     <i class="fas fa-volume-up"></i>
-    <p>Listening on Erick Wendel</p>
+    <p>Listening on Everton Jackson</p>
   </div>
   <script src="./home/js/animation.js"></script>
+  <script>
+    //  bypass prevent cache
+    window.onload = () => {
+      document.getElementById('audio').src = '/stream?id=' + Date.now()
+    }
+  </script>
 </body>
 
 </html>

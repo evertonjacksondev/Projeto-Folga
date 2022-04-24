@@ -1,4 +1,3 @@
-   
 import {
   expect,
   describe,
@@ -21,13 +20,13 @@ const {
   },
 } = config
 
-describe('Service - test suite for core processing', () => {
+describe('#Service - test suite for core processing', () => {
   beforeEach(() => {
     jest.restoreAllMocks()
     jest.clearAllMocks()
   })
 
-  test('createFileStream', () => {
+  test('#createFileStream', () => {
     const currentReadable = TestUtil.generateReadableStream(['abc'])
 
     jest.spyOn(
@@ -43,7 +42,7 @@ describe('Service - test suite for core processing', () => {
     expect(fs.createReadStream).toHaveBeenCalledWith(myFile)
   })
 
-  test('getFileInfo', async () => {
+  test('#getFileInfo', async () => {
     jest.spyOn(
       fsPromises,
       fsPromises.access.name
@@ -60,7 +59,7 @@ describe('Service - test suite for core processing', () => {
     expect(result).toStrictEqual(expectedResult)
   })
 
-  test('getFileStream', async () => {
+  test('#getFileStream', async () => {
     const currentReadable = TestUtil.generateReadableStream(['abc'])
     const currentSong = `mySong.mp3`
     const currentSongFullPath = `${publicDirectory}\\${currentSong}`
