@@ -19,12 +19,12 @@ describe('#View - test suite for presentation layer ', () => {
     text,
     classList
   } = {
-      text: '',
-      classList: {
-        add: jest.fn(),
-        remove: jest.fn(),
-      }
-    }) {
+    text: '',
+    classList: {
+      add: jest.fn(),
+      remove: jest.fn(),
+    }
+  }) {
     return {
       onclick: jest.fn(),
       classList,
@@ -35,8 +35,8 @@ describe('#View - test suite for presentation layer ', () => {
   function makeClassListElement({
     classes
   } = {
-      classes: []
-    }) {
+    classes: []
+  }) {
     const classList = new Set(classes)
     classList.contains = classList.has
     classList.remove = classList.delete
@@ -60,9 +60,9 @@ describe('#View - test suite for presentation layer ', () => {
       document,
       "querySelectorAll"
     ).mockReturnValue([btn])
-
+      
     view.changeCommandBtnsVisibility()
-
+    
     expect(btn.classList.add).toHaveBeenCalledWith('unassigned')
     expect(btn.onclick.name).toStrictEqual('onClickReset')
     expect(() => btn.onclick()).not.toThrow()
@@ -76,9 +76,9 @@ describe('#View - test suite for presentation layer ', () => {
       document,
       "querySelectorAll"
     ).mockReturnValue([btn])
-
+      
     view.changeCommandBtnsVisibility(false)
-
+    
     expect(btn.classList.add).not.toHaveBeenCalled()
     expect(btn.classList.remove).toHaveBeenCalledWith('unassigned')
     expect(btn.onclick.name).toStrictEqual('onClickReset')
@@ -373,7 +373,7 @@ describe('#View - test suite for presentation layer ', () => {
     expect(view.buttons).toBeInstanceOf(Function)
     expect(view.onBtnClick).toBeInstanceOf(Function)
     expect(view.DISABLE_BTN_TIMEOUT).toStrictEqual(500)
-
+    
     expect(() => view.onBtnClick('test')).not.toThrow()
     // expect(view.btnStop).toBeTruthy()
     // expect(view.btnStart).toBeTruthy()
