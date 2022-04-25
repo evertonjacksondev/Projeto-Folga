@@ -12,7 +12,7 @@ git remote -v
 heroku stack:set container
 git push heroku master
 heroku open
-heroku logs -t -a spotify-radio
+heroku logs -t -a spotify-radiox
 
 heroku apps:delete
 rm -rf .git
