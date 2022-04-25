@@ -10,4 +10,4 @@ cliente
   service = tudo que é regra de negocio ou processamento
   controller = é o intermedio entre a view e o service
   view = tudo que é elemento HTML (visualizacao)
-  index = Factory = quem inicializa tudo
+  index = Factory = quem inicializa tudo 
