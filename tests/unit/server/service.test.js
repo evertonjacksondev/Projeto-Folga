@@ -86,7 +86,7 @@ describe('#Service - test suite for core processing', () => {
   test('#getFileStream', async () => {
     const currentReadable = TestUtil.generateReadableStream(['abc'])
     const currentSong = `mySong.mp3`
-    const currentSongFullPath = `${publicDirectory}/${currentSong}`
+    const currentSongFullPath = `${publicDirectory}\\${currentSong}`
 
     const fileInfo = {
       type: '.mp3',
@@ -408,7 +408,7 @@ describe('#Service - test suite for core processing', () => {
     ).mockResolvedValue([fxOnDisk])
 
     const path = await service.readFxByName(inputFx)
-    const expectedPath = `${fxDirectory}/${fxOnDisk}`
+    const expectedPath = `${fxDirectory}\\${fxOnDisk}`
 
     expect(path).toStrictEqual(expectedPath)
     expect(fsPromises.readdir).toHaveBeenCalledWith(fxDirectory)
