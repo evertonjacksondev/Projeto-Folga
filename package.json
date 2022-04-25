@@ -29,8 +29,12 @@
     "supertest": "^6.2.2"
   },
   "dependencies": {
+    "i": "^0.3.7",
+    "npm": "^8.7.0",
     "pino": "^7.8.0",
     "pino-pretty": "^7.5.3",
+    "sox": "^0.1.0",
+    "sox-stream": "^2.0.6",
     "throttle": "^1.0.3"
   }
 }
