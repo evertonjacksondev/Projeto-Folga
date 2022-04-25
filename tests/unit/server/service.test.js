@@ -77,7 +77,7 @@ describe('#Service - test suite for core processing', () => {
     const result = await service.getFileInfo(currentSong)
     const expectedResult = {
       type: '.mp3',
-      name: `${publicDirectory}\\${currentSong}`
+      name: `${publicDirectory}/${currentSong}`
     }
 
     expect(result).toStrictEqual(expectedResult)
@@ -86,7 +86,7 @@ describe('#Service - test suite for core processing', () => {
   test('#getFileStream', async () => {
     const currentReadable = TestUtil.generateReadableStream(['abc'])
     const currentSong = `mySong.mp3`
-    const currentSongFullPath = `${publicDirectory}\\${currentSong}`
+    const currentSongFullPath = `${publicDirectory}/${currentSong}`
 
     const fileInfo = {
       type: '.mp3',
@@ -408,7 +408,7 @@ describe('#Service - test suite for core processing', () => {
     ).mockResolvedValue([fxOnDisk])
 
     const path = await service.readFxByName(inputFx)
-    const expectedPath = `${fxDirectory}\\${fxOnDisk}`
+    const expectedPath = `${fxDirectory}/${fxOnDisk}`
 
     expect(path).toStrictEqual(expectedPath)
     expect(fsPromises.readdir).toHaveBeenCalledWith(fxDirectory)
