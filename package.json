@@ -17,7 +17,7 @@
     "test:coverage:docker": "docker-compose up --build test-coverage"
   },
   "engines": {
-    "node": "17"
+    "node": "18"
   },
   "keywords": [],
   "author": "Everton Jackson",
